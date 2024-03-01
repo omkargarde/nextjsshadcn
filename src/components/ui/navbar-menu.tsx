@@ -1,8 +1,8 @@
 "use client";
-import React from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
 const transition = {
   type: "spring",
@@ -38,7 +38,7 @@ export const MenuItem = ({
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={transition}
         >
-          {active === item && (
+          {active === item && children && (
             <div className="absolute left-1/2 top-[calc(100%_+_1.7rem)] -translate-x-1/2 transform">
               <motion.div
                 transition={transition}
