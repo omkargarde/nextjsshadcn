@@ -18,7 +18,7 @@ export function Button({
   duration,
   className,
   ...otherProps
-}: {
+}: Readonly<{
   borderRadius?: string;
   children: React.ReactNode;
   as?: any;
@@ -27,7 +27,7 @@ export function Button({
   duration?: number;
   className?: string;
   [key: string]: any;
-}) {
+}>) {
   return (
     <Component
       className={cn(

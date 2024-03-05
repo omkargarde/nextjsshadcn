@@ -1,14 +1,9 @@
 "use client";
-import {
-  HoveredLink,
-  Menu,
-  MenuItem,
-  ProductItem,
-} from "@/components/ui/navbar-menu";
+import { HoveredLink, Menu, MenuItem } from "@/components/ui/navbar-menu";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
 import React, { useState } from "react";
-function Navbar({ className }: { className?: string }) {
+function Navbar({ className }: Readonly<{ className?: string }>) {
   const [active, setActive] = useState<string | null>(null);
   return (
     <div
